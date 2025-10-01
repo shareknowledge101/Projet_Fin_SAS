@@ -5,11 +5,27 @@
 
 
 
+
+
+
 void chercher_nom(){
     char recherch[50];
     int i, exist = 0;
+    int choix;
 
-    while(exist == 0){
+    while(1){
+        system("clear");
+        printf("\n________Recherche par Nom________\n");
+        printf("1. Rechercher un produit\n");
+        printf("0. Retour\n");
+        printf("Votre choix: ");
+        scanf("%d", &choix);
+        
+        if(choix == 0) {
+            cherecher_fct();
+            return;
+        }
+        
         printf("Entrez le nom de produit : ");
         scanf("%s", recherch);
 
@@ -21,9 +37,10 @@ void chercher_nom(){
             {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}
         };
 
-        printf("\nResultat pour : %s", recherch);
+        printf("\nResultat pour : %s\n", recherch);
         printf("__________________________\n");
 
+        exist = 0;
         for (i = 0; i < 5; i++) {
             if(strcmp(products[i].nom, recherch) == 0){
                 printf("PRODUIT TROUVE!\n");
@@ -38,23 +55,55 @@ void chercher_nom(){
             }
         }
 
-
         if (exist == 0){
             printf("\nProduit non trouver!\n");
-    }
+        }
 
-    printf("\nAppuyez sur Entree pour continuer..");
-    getchar();getchar();
+        printf("\nAppuyez sur Entree pour continuer...");
+        getchar(); getchar();
     }
-
 }
 
 void chercher_categorie(){
-    printf("Recherche par categorie - Fonctionnalite a implementer\n");
-    printf("Appuyez sur Entree pour continuer..");
-    getchar(); getchar();
-}
+    char categorie[50];
+    int i, found = 0;
+    
+    system("clear");
+    printf("\n________Recherche par Categorie________\n");
+    
 
+    printf("Entrez la categorie: ");
+    scanf("%s", categorie);
+    
+
+    
+    struct produits_data products[5] = {
+        {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "Lavazza Qualita", "Italien", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}};
+    
+    printf("\nResultats pour la categorie: %s\n", categorie);
+    printf("________________________________\n");
+    
+    for(i = 0; i < 5; i++){
+        if(strcmp(products[i].catego, categorie) == 0){
+            printf("ID: %d | %s | %.2f MAD | Stock: %d\n", 
+                   products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);
+            found = 1;
+        }
+    }
+    
+    
+    
+    if(!found) {
+        printf("Aucun produit trouve dans cette categorie!\n");
+    }
+    
+    printf("\nAppuyez sur Entree pour continuer...");
+    getchar();getchar();
+}
 
 void cherecher_fct(){
     int cherecher_method;
@@ -86,12 +135,99 @@ void cherecher_fct(){
     }
 }
 
+
+
+void tri_par_prix(){
+
+
+
+
+    system("clear");
+    printf("\n________Tri par Prix________\n");
+    
+
+
+    struct produits_data products[5] = {
+        {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}
+    };
+    
+
+
+
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4 - i; j++) {
+            if(products[j].prix > products[j+1].prix) {
+
+                struct produits_data temp = products[j];
+                products[j] = products[j+1];
+                products[j+1] = temp;
+            }
+        }
+    }
+    
+    printf("\nProduits tries par prix (croissant):\n");
+    for(int i = 0; i < 5; i++) {
+        printf("ID: %d | %s | %.2f MAD | Stock: %d\n", 
+               products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);
+    }
+    
+    printf("\nAppuyez sur Entree pour continuer...");
+    getchar(); getchar();
+}
+
+
+
+
+void tri_par_nom() {
+    system("clear");
+    printf("\n________Tri par Nom________\n");
+    
+    struct produits_data products[5] = {
+        {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
+    
+
+
+
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4 - i; j++) {
+            if(strcmp(products[j].nom, products[j+1].nom) > 0) {
+
+
+
+                struct produits_data temp = products[j];
+                products[j] = products[j+1];
+                products[j+1] = temp;
+            }
+        }
+    }
+    
+    printf("\nProduits tries par nom (alphabetique):\n");
+    for(int i = 0; i < 5; i++){
+        printf("ID: %d | %s | %.2f MAD | Stock: %d\n", 
+               products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);
+    }
+    
+    printf("\nAppuyez sur Entree pour continuer...");
+    getchar(); getchar();
+}
+
+
+
 void tri() {
     int tri_method;
 
+    printf("\n________Tri des Produits________\n");
     printf("Comment voulez-vous trier ?\n");
-    printf("1) Par Prix\n");
-    printf("2) Par Nom Alphabetique\n");
+    printf("1) Par Prix (croissant)\n");
+    printf("2) Par Nom (alphabetique)\n");
     printf("0) Retour\n");
     printf(">>>Entrez votre choix : ");
     scanf("%d", &tri_method);
@@ -101,19 +237,16 @@ void tri() {
             CP();
             break;
         case 1:
-            printf("Tri par prix\n");
-            getchar();getchar();
-
-            CP();
+            tri_par_prix();
+            tri();
             break;
         case 2:
-            printf("Tri par nom alphabitique\n");
-            getchar();getchar();
-            CP();
+            tri_par_nom();
+            tri();
             break;
         default:
             printf("Choix incorrect!\n");
-            getchar();getchar();
+            getchar(); getchar();
             tri();
     }
 }
@@ -126,15 +259,20 @@ void CP() {
     system("clear");
     printf("\n________Consultation des produits________\n");
 
+
+
     struct produits_data products[5] = {
         {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
         {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
         {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
         {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafé Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}
-    };
+        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
 
     printf("\n_____________catalogue des coffes________________\n");
+
+
+
+    
     for(int i = 0; i < 5; i++) {
         printf("ID: %d | %s | %s | %.2fMAD | Stock: %d\n", products[i].idProduit, products[i].nom, products[i].catego, products[i].prix, products[i].stock);
         printf("Description: %s\n", products[i].description);
@@ -160,7 +298,7 @@ void CP() {
                 printf("ID: %d | %s | %.2fMAD | Stock: %d\n", products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);
             }
 
-            printf("\nAppuyez sur Entrée pour continuer..");
+            printf("\nAppuyez sur Entree pour continuer..");
 
             getchar(); getchar();
             CP();

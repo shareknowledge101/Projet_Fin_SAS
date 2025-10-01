@@ -23,7 +23,7 @@ int main() {
     
     while(1){
         system("clear");
-        printf("Client : %s %s [Solde : %.2fMAD]\n", client.nom, client.prenom, client.sold);
+        printf("Client : %s %s [Solde : %.2fMAD]\nEmail : [ %s ]\n", client.nom, client.prenom, client.sold, client.email);
         printf("___________page [1]__________");
         printf("\n1. Gestion du profil client");
         printf("\n2. Gestion du solde virtuel");
