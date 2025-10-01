@@ -9,6 +9,13 @@
 extern int client_exist;
 extern struct client_data client;
 
+
+
+extern char last_changed_name[];
+extern float total_deposits;
+extern float total_spent;
+extern int products_bought;
+
 struct client_data {
     
     int idClient;

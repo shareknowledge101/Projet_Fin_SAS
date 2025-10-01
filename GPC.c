@@ -14,8 +14,8 @@ extern struct client_data client;
 }*/
 
 
+
 void GPC() {
-        
     int choix;
     
     system("clear");
@@ -44,10 +44,10 @@ void GPC() {
             scanf("%29s", client.prenom);
 
 
+            sprintf(last_changed_name, "%s %s (modifie)", client.nom, client.prenom);
 
             to_lowercase(client.nom);
             to_lowercase(client.prenom);
-
 
 
             sprintf(client.email, "%s.%s@gmail.com", client.nom, client.prenom);
@@ -56,9 +56,7 @@ void GPC() {
             printf("Profil modifie avec succès!\n");
             break;
         case 2:
-
-
-        printf("\nAppuyez sur Entree pour continuer...");
+            printf("\nAppuyez sur Entree pour continuer...");
             getchar(); getchar();
             GPC();
             break;
@@ -68,5 +66,6 @@ void GPC() {
             GPC();
     }
     
-    printf("\nAppuyez sur Entree pour continuer...");
+    printf("\nAppuyez sur Entree pour continuer.");
+    getchar(); getchar();
 }

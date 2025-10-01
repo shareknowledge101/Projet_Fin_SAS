@@ -3,7 +3,13 @@
 #include <ctype.h>
 #include "main_header.h"
 
-void EFF_ACH() {
+
+extern float total_spent;
+extern int products_bought;
+
+
+
+void EFF_ACH(){
     int id_produit, quantite, i, produit_trouve = 0;
     
     system("clear");
@@ -21,6 +27,7 @@ void EFF_ACH() {
     for(i = 0; i < 5; i++) {
         printf("ID: %d | %s | %.2f MAD | Stock: %d\n", 
                products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);
+            
     }
     
     printf("\nEntrez l'ID du produit que vous voulez acheter: ");
@@ -29,6 +36,8 @@ void EFF_ACH() {
     printf("Entrez la quantite que vous acheter: ");
     scanf("%d", &quantite);
     
+
+
     for(i = 0; i < 5; i++) {
         if(products[i].idProduit == id_produit) {
             produit_trouve = 1;
@@ -41,23 +50,23 @@ void EFF_ACH() {
             printf("Prix total: %.2f MAD\n", prix_total);
             printf("Stock disponible: %d\n", products[i].stock);
             printf("Votre solde: %.2f MAD\n", client.sold);
-            
-
 
             if(products[i].stock < quantite) {
                 printf("\nTransaction non valide: Stock insuffisant!\n");
                 printf("Stock disponible: %d, Quantite demandee: %d\n", products[i].stock, quantite);
                 break;
             }
-            
-
 
             if(client.sold >= prix_total) {
-
-
                 client.sold = client.sold - prix_total;
-                
                 products[i].stock = products[i].stock - quantite;
+                
+
+
+
+                total_spent = total_spent + prix_total;
+
+                products_bought = products_bought + quantite;
                 
                 printf("\nAchat effectue avec succès!\n");
                 printf("Montant debite: %.2f MAD\n", prix_total);

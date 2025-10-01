@@ -7,15 +7,14 @@
 
 extern struct client_data client;
 
+extern float total_deposits;
+
 void GSV(){
- 
     int choix;
     float montant;
 
-
     system("clear");
     printf("\n________Gestion du Solde Virtuel________\n");
-
     printf("Votre Solde actuel : %.2fMAD\n", client.sold);
 
     printf("\nles options\n");
@@ -25,11 +24,12 @@ void GSV(){
     printf("Votre choix: ");
     scanf("%d", &choix);
     
-
     switch(choix){
         case 0:
             break;
         case 1:
+
+        
             system("clear");
             printf("\n________Votre Solde Actuel________\n");
             printf("Solde: %.2f MAD\n", client.sold);
@@ -38,6 +38,8 @@ void GSV(){
             getchar(); getchar();
             GSV();
             break;
+
+
         case 2:
             system("clear");
             printf("\n________Alimentation du Solde________\n");
@@ -45,12 +47,14 @@ void GSV(){
             printf("Montant à ajouter: ");
             scanf("%f", &montant);
 
-
             if(montant > 0){
                 client.sold = client.sold + montant;
+                total_deposits += montant;
                 printf("\nVotre depot effectue avec success\n");
                 printf("Votre Nouveau solde est : [%.2f]MAD\n", client.sold);
             }
+
+
             else{
                 printf("Echec!, le montant doit etre positive");
             }
@@ -59,11 +63,11 @@ void GSV(){
             GSV();
             break;
 
+
         default:
             printf("Choix incorrect!\n");
             getchar(); getchar();
             GSV();
-
     }
-
 }
+
