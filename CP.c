@@ -10,36 +10,36 @@ void chercher_nom(){
     int i, exist = 0;
 
     while(exist == 0){
-    printf("Entrez le nom de produit : ");
-    scanf("%s", recherch);
+        printf("Entrez le nom de produit : ");
+        scanf("%s", recherch);
 
-    struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans with chocolate notes"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso blend"},
-        {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian single-origin beans"},
-        {104, 100, 70.50, "Lavazza Qualita", "Italien", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}
-    };
+        struct produits_data products[5] = {
+            {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans with chocolate notes"},
+            {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso blend"},
+            {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian single-origin beans"},
+            {104, 100, 70.50, "Lavazza Qualita", "Italien", "Well-balanced medium roast Italian coffee"},
+            {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}
+        };
 
-    printf("\nResultat pour : %s", recherch);
-    printf("__________________________\n");
+        printf("\nResultat pour : %s", recherch);
+        printf("__________________________\n");
 
-    for (i = 0; i < 5; i++) {
-        if(strcmp(products[i].nom, recherch) == 0){
-            printf("PRODUIT TROUVE!\n");
-            printf("ID: %d\n", products[i].idProduit);
-            printf("Nom: %s\n", products[i].nom);
-            printf("Categorie: %s\n", products[i].catego);
-            printf("Prix: %.2f MAD\n", products[i].prix);
-            printf("Stock: %d\n", products[i].stock);
-            printf("Description: %s\n", products[i].description);
-            exist = 1;
-            break;
+        for (i = 0; i < 5; i++) {
+            if(strcmp(products[i].nom, recherch) == 0){
+                printf("PRODUIT TROUVE!\n");
+                printf("ID: %d\n", products[i].idProduit);
+                printf("Nom: %s\n", products[i].nom);
+                printf("Categorie: %s\n", products[i].catego);
+                printf("Prix: %.2f MAD\n", products[i].prix);
+                printf("Stock: %d\n", products[i].stock);
+                printf("Description: %s\n", products[i].description);
+                exist = 1;
+                break;
+            }
         }
-    }
 
 
-    if (exist == 0){
+        if (exist == 0){
             printf("\nProduit non trouver!\n");
     }
 
@@ -142,7 +142,7 @@ void CP() {
     }
 
     printf("\n Comment voulez-vous procceder ?\n");
-    printf("1) Afficher catalogue simplifié\n");
+    printf("1) Afficher catalogue simplifier\n");
     printf("2) Rechercher produits\n");
     printf("3) Tri des produits\n");
     printf("0) Retour\n");
@@ -154,7 +154,7 @@ void CP() {
             break;
         case 1:
             system("clear");
-            printf("\n_____________liste simplifiée des produits________________\n");
+            printf("\n_____________liste simplifie des produits________________\n");
             
             for(int i = 0; i < 5; i++) {
                 printf("ID: %d | %s | %.2fMAD | Stock: %d\n", products[i].idProduit, products[i].nom, products[i].prix, products[i].stock);

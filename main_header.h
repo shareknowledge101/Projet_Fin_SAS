@@ -3,7 +3,11 @@
 
 #define MAX_CLIENT 1
 
-int se_trouve;
+
+
+
+extern int client_exist;
+extern struct client_data client;
 
 struct client_data {
     
