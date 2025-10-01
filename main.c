@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main_header.h"
 
 
-void AC();
 
 
 int main() {
+    
     int choix;
 
-    int i = 0;
     
-    do{
+    while(1){
+        system("clear");
         printf("___________page [1]__________");
         printf("\n1. Gestion du profil client");
         printf("\n2. Gestion du solde virtuel");
@@ -21,11 +22,13 @@ int main() {
         printf("\n_____________________________");
         printf("\t\nEntrez votre Choix : ");
         scanf("%d", &choix);
+
+        printf(">>>\nVous avez choisi l'option %d\n", choix);
         
         switch (choix) {
             case 0:
                 printf("Au revoir!\n");
-                break;
+                return 0;
             case 1:
                 AC();
                 break;
@@ -45,6 +48,6 @@ int main() {
                 printf("Input incorrect!\n");
         }
 
-    } while (i == 0);
+    }
     return 0;
 }

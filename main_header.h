@@ -2,6 +2,9 @@
 #define MAIN_HEADER_H
 
 
+
+
+
 struct client_data {
     
     int idClient;
@@ -23,19 +26,17 @@ struct produits_data {
 
 
 struct catalog {
-    struct produits_data carrion[5];
-    struct produits_data asta[5];
-    struct produits_data dahab[5];
-    struct produits_data lavazza[5];
-    struct produits_data nescafe[5];
+    struct produits_data carrion;
+    struct produits_data asta;
+    struct produits_data dahab;
+    struct produits_data lavazza;
+    struct produits_data nescafe;
 };
 
-
-
+void CP();
 void AC();
 void GPC();
 void GSV();
-void CP();
 void stat();
 void EFF_ACH();
     
