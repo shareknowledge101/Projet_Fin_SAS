@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "main_header.h"
 
+int se_trouve = 0 ;
+
 
 void AC() {
     
@@ -21,6 +23,7 @@ void AC() {
     printf("\n>>>Votre nom : %s\n>>>Votre prenom : %s", client.nom, client.prenom);
     printf("\n>>>Votre Email est : %s.%s@gmail.com", client.nom, client.prenom);
     printf("\n>>>Votre Solde : %.2fMAD", client.sold);
+    se_trouve = 1;
     printf("\n_____________________________\n");
     getchar();getchar();
     

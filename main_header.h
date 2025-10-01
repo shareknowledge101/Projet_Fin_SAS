@@ -1,9 +1,9 @@
 #ifndef MAIN_HEADER_H
 #define MAIN_HEADER_H
 
+#define MAX_CLIENT 1
 
-
-
+int se_trouve;
 
 struct client_data {
     
@@ -32,6 +32,14 @@ struct catalog {
     struct produits_data lavazza;
     struct produits_data nescafe;
 };
+
+
+void chercher_nom();
+void chercher_categorie();
+void cherecher_fct();
+void tri();
+
+
 
 void CP();
 void AC();
