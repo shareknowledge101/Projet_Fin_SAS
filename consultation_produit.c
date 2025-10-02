@@ -30,11 +30,11 @@ void chercher_nom(){
         scanf("%s", recherch);
 
         struct produits_data products[5] = {
-            {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans with chocolate notes"},
-            {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso blend"},
-            {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian single-origin beans"},
-            {104, 100, 70.50, "Lavazza Qualita", "Italien", "Well-balanced medium roast Italian coffee"},
-            {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}
+            {101, 50, 35.50, "carrion", "Arabica", "Smooth Arabica beans with chocolate notes"},
+            {102, 75, 29.99, "asta", "Robusta", "Strong Italian-style espresso blend"},
+            {103, 25, 49.50, "dahab", "Arabica", "Premium Ethiopian single-origin beans"},
+            {104, 100, 70.50, "lavazza", "Italien", "Well-balanced medium roast Italian coffee"},
+            {105, 80, 30.25, "nescafe", "Instant", "Soluble instant coffee for quick preparation"}
         };
 
         printf("\nResultat pour : %s\n", recherch);
@@ -78,11 +78,11 @@ void chercher_categorie(){
 
     
     struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans with chocolate notes"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso blend"},
-        {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian single-origin beans"},
-        {104, 100, 70.50, "Lavazza Qualita", "Italien", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee for quick preparation"}};
+        {101, 50, 35.50, "carrion", "Arabica", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "asta", "Robusta", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "dahab", "Arabica", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "lavazza", "Italien", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "nescafe", "Instant", "Soluble instant coffee for quick preparation"}};
     
     printf("\nResultats pour la categorie: %s\n", categorie);
     printf("________________________________\n");
@@ -148,11 +148,11 @@ void tri_par_prix(){
 
 
     struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
-        {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
-        {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}
+        {101, 50, 35.50, "carrion", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "asta", "Robusta 250g", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "dahab", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "lavazza", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "nescafe", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}
     };
     
 
@@ -187,11 +187,11 @@ void tri_par_nom() {
     printf("\n________Tri par Nom________\n");
     
     struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
-        {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
-        {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
+        {101, 50, 35.50, "carrion", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "asta", "Robusta 250g", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "dahab", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "lavazza", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "nescafe", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
     
 
 
@@ -262,11 +262,11 @@ void CP() {
 
 
     struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta 250g", "Strong Italian-style espresso blend"},
-        {103, 25, 49.50, "Dahab Gold", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
-        {104, 100, 70.50, "Lavazza Qualità", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
+        {101, 50, 35.50, "carrion", "Arabica 250g", "Smooth Arabica beans with chocolate notes"},
+        {102, 75, 29.99, "asta", "Robusta 250g", "Strong Italian-style espresso blend"},
+        {103, 25, 49.50, "dahab", "Premium Blend 500g", "Premium Ethiopian single-origin beans"},
+        {104, 100, 70.50, "lavazza", "Italian Blend 125g", "Well-balanced medium roast Italian coffee"},
+        {105, 80, 30.25, "nescafe", "Instant Coffee 170g", "Soluble instant coffee for quick preparation"}};
 
     printf("\n_____________catalogue des coffes________________\n");
 

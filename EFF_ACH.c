@@ -16,11 +16,11 @@ void EFF_ACH(){
     printf("\n________Effectuer un Achat________\n");
     
     struct produits_data products[5] = {
-        {101, 50, 35.50, "Carrion Classic", "Arabica", "Smooth Arabica beans"},
-        {102, 75, 29.99, "Asta Espresso", "Robusta", "Strong Italian-style espresso"},
-        {103, 25, 49.50, "Dahab Gold", "Arabica", "Premium Ethiopian beans"},
-        {104, 100, 70.50, "Lavazza Qualita", "Italien", "Medium roast Italian coffee"},
-        {105, 80, 30.25, "Nescafe Classic", "Instant", "Soluble instant coffee"}
+        {101, 50, 35.50, "carrion", "Arabica", "Smooth Arabica beans"},
+        {102, 75, 29.99, "asta", "Robusta", "Strong Italian-style espresso"},
+        {103, 25, 49.50, "dahab", "Arabica", "Premium Ethiopian beans"},
+        {104, 100, 70.50, "lavazza", "Italien", "Medium roast Italian coffee"},
+        {105, 80, 30.25, "nescafe", "Instant", "Soluble instant coffee"}
     };
     
     printf("\n________Catalogue Disponible________\n");

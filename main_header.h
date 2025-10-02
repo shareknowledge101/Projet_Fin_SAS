@@ -47,6 +47,7 @@ struct catalog {
 
 void to_lowercase(char stri[]);
 
+
 void chercher_nom();
 void chercher_categorie();
 void cherecher_fct();

@@ -20,11 +20,11 @@ void GPC() {
     
     system("clear");
     printf("\n________Gestion de Profil Client________\n");
-    printf("ID: %d\n", client.idClient);
+    /*printf("ID: %d\n", client.idClient);
     printf("Nom: %s\n", client.nom);
     printf("Prenom: %s\n", client.prenom);
     printf("Email: %s\n", client.email);
-    printf("Solde: %.2f MAD\n", client.sold);
+    printf("Solde: %.2f MAD\n", client.sold);*/
     
     printf("\nOptions:\n");
     printf("1. Modifier le profil\n");
@@ -56,6 +56,16 @@ void GPC() {
             printf("Profil modifie avec succès!\n");
             break;
         case 2:
+            
+
+            printf("\n_________________________________");
+            printf("\nID: %d\n", client.idClient);
+            printf("Nom: %s\n", client.nom);
+            printf("Prenom: %s\n", client.prenom);
+            printf("Email: %s\n", client.email);
+            printf("Solde: %.2f MAD\n", client.sold);
+            printf("_________________________________");
+            
             printf("\nAppuyez sur Entree pour continuer...");
             getchar(); getchar();
             GPC();
