@@ -5,9 +5,9 @@
 
 
 
-extern struct client_data client;
+//extern struct client_data client;
 
-extern float total_deposits;
+//extern float total_deposits;
 
 void GSV(){
     int choix;

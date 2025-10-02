@@ -7,11 +7,6 @@
 
 int client_exist = 0;
 struct client_data client;
-
-
-
-
-
 char last_changed_name[60] = "Aucun changement";
 float total_deposits = 0;
 float total_spent = 0;

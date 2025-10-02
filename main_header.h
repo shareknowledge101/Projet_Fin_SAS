@@ -8,13 +8,12 @@
 
 extern int client_exist;
 extern struct client_data client;
-
-
-
 extern char last_changed_name[];
 extern float total_deposits;
 extern float total_spent;
 extern int products_bought;
+
+
 
 struct client_data {
     
@@ -43,6 +42,17 @@ struct catalog {
     struct produits_data lavazza;
     struct produits_data nescafe;
 };
+
+/*
+struct client_data client;
+int client_exist = 0;
+char last_changed_name[60] = "Aucun changement";
+float total_deposits = 0;
+float total_spent = 0;
+int products_bought = 0;
+*/
+
+
 
 
 void to_lowercase(char stri[]);

@@ -17,8 +17,8 @@ void to_lowercase(char stri[]) {
     }
 }
 
-extern int client_exist;
-extern struct client_data client;
+//extern int client_exist;
+//extern struct client_data client;
 
 
 void AC() {

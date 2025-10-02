@@ -4,8 +4,8 @@
 #include "main_header.h"
 
 
-extern float total_spent;
-extern int products_bought;
+//extern float total_spent;
+//extern int products_bought;
 
 
 
